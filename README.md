@@ -1,30 +1,25 @@
-# CodeSense ML Service
+# CodeSense Frontend
 
-Python-based Machine Learning service for the CodeSense platform.
-Random Forest risk prediction + FastAPI REST endpoint.
+React.js frontend for the CodeSense AI-Driven Code Execution & Learning Analytics Platform.
 
 ## What This Does
-- Trains a Random Forest Classifier on student execution data
-- Predicts at-risk students based on error frequency, attempt count, success rate
-- Applies K-Means clustering to group students by error patterns
-- Serves predictions via FastAPI REST API to the Node.js backend
+- Login & Register page with role-based access (Student / Educator)
+- Code editor with language selection (Python, Java, C++, JavaScript)
+- Pattern-based execution engine with instant output display
+- AI-style error explanation panel
+- Student dashboard — submissions, success rate, ML risk score
+- Educator dashboard — class analytics, at-risk students, error distribution
+- Practice recommendations based on error history
 
 ## Tech Stack
-- Python 3.14
-- scikit-learn (Random Forest, K-Means)
-- FastAPI + uvicorn
-- pandas + numpy
-- joblib (model save/load)
-
-## Files
-- `train_model.py` — trains and saves the Random Forest model
-- `ml_api.py` — FastAPI server that serves predictions
+- React.js v18
+- JavaScript (ES6+)
+- CSS-in-JS (Inline Styles)
 
 ## How to Run
 ```bash
-pip install fastapi uvicorn scikit-learn pandas numpy joblib
-python train_model.py
-uvicorn ml_api:app --reload --port 8000
+npm install
+npm start
 ```
 
-## API Endpoint
+## Environment Variables (.env)
